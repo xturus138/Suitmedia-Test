@@ -4,7 +4,14 @@
     <string name="hint_palindrome">Palindrome</string>
 
     <string name="desc_image_add_people">Image for adding people</string>
-
     <string name="button_check">CHECK</string>
     <string name="button_next">NEXT</string>
+
+    <string name="toolbar_title_second_screen">Second Screen</string>
+    <string name="desc_back_button">Back button</string>
+    <string name="text_welcome">Welcome</string>
+    <string name="text_name">John Doe</string>
+    <string name="text_selected_user_name">Selected User Name</string>
+    <string name="button_choose_user">Choose a User</string>
+
 </resources>

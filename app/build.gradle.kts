@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.suitmedia.palindromeapp"
-        minSdk = 24
-        targetSdk = 35
+        minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -40,7 +40,7 @@ android {
 
 dependencies {
 
-    implementation("implementation 'com.google.android.material:material:1.3.0")
+    implementation(libs.material.v130)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

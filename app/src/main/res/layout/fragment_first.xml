@@ -89,7 +89,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtLayoutPalindrome"
-                app:layout_constraintWidth_max="320dp" />
+                app:layout_constraintWidth_max="310dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnNext"
@@ -99,7 +99,7 @@
                 android:text="@string/button_next"
                 app:backgroundTint="@color/blueDark"
                 app:cornerRadius="12dp"
-                app:layout_constraintWidth_max="320dp"
+                app:layout_constraintWidth_max="310dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnCheck" />
