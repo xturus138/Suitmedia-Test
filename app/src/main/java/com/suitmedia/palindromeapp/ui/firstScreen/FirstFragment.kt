@@ -7,24 +7,43 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.suitmedia.palindromeapp.R
+import com.suitmedia.palindromeapp.databinding.FragmentFirstBinding
 
-class FirstFragment : Fragment() {
+class FirstFragment : Fragment(), View.OnClickListener {
 
-    companion object {
-        fun newInstance() = FirstFragment()
-    }
+    private lateinit var binding: FragmentFirstBinding
+
 
     private val viewModel: FirstViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnCheck.setOnClickListener(this)
+        binding.btnNext.setOnClickListener(this)
+
+        viewModel.username.observe(viewLifecycleOwner) {data ->
+
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnCheck -> {
+
+            }
+
+            R.id.btnNext -> {
+
+            }
+        }
     }
 }
