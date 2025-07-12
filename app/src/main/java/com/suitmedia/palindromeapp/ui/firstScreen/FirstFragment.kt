@@ -2,6 +2,7 @@ package com.suitmedia.palindromeapp.ui.firstScreen
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,10 +40,6 @@ class FirstFragment : Fragment(), View.OnClickListener {
         binding.btnCheck.setOnClickListener(this)
         binding.btnNext.setOnClickListener(this)
 
-        viewModel.username.observe(viewLifecycleOwner) {data ->
-            //kela euy kudu datastore hela
-        }
-
         viewModel.isPalindrome.observe(viewLifecycleOwner) {palindrome ->
             if(palindrome){
                 Toast.makeText(requireContext(), "isPalindrome", Toast.LENGTH_SHORT).show()
@@ -56,13 +53,23 @@ class FirstFragment : Fragment(), View.OnClickListener {
         when (v?.id) {
             R.id.btnCheck -> {
                 val input = binding.txtInputPalindrome.text.toString().ifEmpty { "Wrong" }
-                val name = binding.txtInputName.text.toString().ifEmpty { "John Doe" }
                 viewModel.checkPalindrome(input)
             }
 
             R.id.btnNext -> {
-                mainActivity.replaceFragment(SecondFragment())
+                val name = binding.txtInputName.text.toString().ifEmpty { "John Doe" }
+                val secondFragment = SecondFragment()
+                val bundle = Bundle().apply {
+                    putString(SecondFragment.KEY_NAME, name)
+                }
+                secondFragment.arguments = bundle
+                mainActivity.replaceFragment(secondFragment)
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy: called")
     }
 }

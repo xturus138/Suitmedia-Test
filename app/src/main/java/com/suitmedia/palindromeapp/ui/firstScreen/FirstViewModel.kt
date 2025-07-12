@@ -7,8 +7,8 @@ import java.util.Locale
 
 class FirstViewModel : ViewModel() {
 
-    private val _userName = MutableLiveData<String>()
-    val username: LiveData<String> = _userName
+//    private val _userName = MutableLiveData<String>()
+//    val username: LiveData<String> = _userName
 
     private val _isPalindrome = MutableLiveData<Boolean>()
     val isPalindrome: LiveData<Boolean> = _isPalindrome
@@ -24,9 +24,9 @@ class FirstViewModel : ViewModel() {
         return false
     }
 
-    fun username(name: String){
-        _userName.value = name
-    }
+//    fun username(name: String){
+//        _userName.value = name
+//    }
 
 
 }
