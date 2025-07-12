@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.suitmedia.palindromeapp.R
+import com.suitmedia.palindromeapp.databinding.FragmentThirdBinding
 
 class ThirdFragment : Fragment() {
+
+    private lateinit var binding: FragmentThirdBinding
 
     companion object {
         fun newInstance() = ThirdFragment()
@@ -16,16 +19,18 @@ class ThirdFragment : Fragment() {
 
     private val viewModel: ThirdViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_third, container, false)
+        binding = FragmentThirdBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 }
