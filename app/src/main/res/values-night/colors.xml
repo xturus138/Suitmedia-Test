@@ -4,6 +4,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FF000000</color>
     <color name="blueDark">#2E8EE8</color>
+    <color name="textInput">#FF000000</color>
     <color name="darkText">#F1F1F1</color>
     <color name="whiteText">#FFFFFFFF</color>
 </resources>

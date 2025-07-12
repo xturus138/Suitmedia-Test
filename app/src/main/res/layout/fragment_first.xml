@@ -47,7 +47,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtInputName"
                     android:layout_width="match_parent"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textInput"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
 
@@ -74,7 +74,7 @@
                     android:id="@+id/txtInputPalindrome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textInput"
                     android:inputType="textPersonName"/>
 
             </com.google.android.material.textfield.TextInputLayout>
