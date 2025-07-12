@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/pullRefresh"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Third Screen"
+                android:text="@string/third_screen"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/darkText"
@@ -39,22 +40,32 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="21dp"
-            android:paddingTop="15dp"
-            android:paddingEnd="21dp"
-            android:paddingBottom="50dp">
+            android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListName"
+                android:id="@+id/rvUser"
+                android:contentDescription="@string/this_is_list_users"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="match_parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <ProgressBar
+                android:id="@+id/pvLoading"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_users_founds"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
     </LinearLayout>
-</ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

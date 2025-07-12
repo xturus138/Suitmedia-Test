@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.PalindromeApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/darkText</item>
         <item name="android:colorBackground">@color/white</item>
-        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/darkText</item>
     </style>
 
     <style name="ToolbarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">

@@ -97,6 +97,7 @@
                 android:layout_marginTop="315dp"
                 android:text="@string/button_choose_user"
                 app:backgroundTint="@color/blueDark"
+                android:textColor="@color/whiteText"
                 app:cornerRadius="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

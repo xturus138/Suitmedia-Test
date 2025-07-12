@@ -13,5 +13,11 @@
     <string name="text_name">John Doe</string>
     <string name="text_selected_user_name">Selected User Name</string>
     <string name="button_choose_user">Choose a User</string>
+    <string name="no_users_founds">No users founds</string>
+    <string name="this_is_list_users">this is list users</string>
+    <string name="third_screen">Third Screen</string>
+    <string name="email_example_com">email@example.com</string>
+    <string name="full_name">Full Name</string>
+    <string name="image_users">image users</string>
 
 </resources>

@@ -39,6 +39,12 @@ class SecondFragment : Fragment(), View.OnClickListener {
         binding.btnBack.setOnClickListener(this)
         binding.btnChooseUser.setOnClickListener(this)
 
+        parentFragmentManager.setFragmentResultListener("userSelected", viewLifecycleOwner) { _, bundle ->
+            val name = bundle.getString("selectedUserName")
+            binding.tvSelectedUser.text = name ?: "No user selected"
+        }
+
+
     }
 
     override fun onClick(v: View?) {

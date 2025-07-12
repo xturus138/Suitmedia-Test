@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
                 android:layout_marginTop="51dp"
-                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundColor="@color/colorBackground"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -47,6 +47,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtInputName"
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
 
@@ -58,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_palindrome"
                 android:layout_marginTop="22dp"
-                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundColor="@color/colorBackground"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -73,6 +74,7 @@
                     android:id="@+id/txtInputPalindrome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:inputType="textPersonName"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -85,6 +87,7 @@
                 android:layout_marginTop="45dp"
                 android:text="@string/button_check"
                 app:backgroundTint="@color/blueDark"
+                android:textColor="@color/whiteText"
                 app:cornerRadius="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -98,6 +101,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/button_next"
                 app:backgroundTint="@color/blueDark"
+                android:textColor="@color/whiteText"
                 app:cornerRadius="12dp"
                 app:layout_constraintWidth_max="310dp"
                 app:layout_constraintEnd_toEndOf="parent"
